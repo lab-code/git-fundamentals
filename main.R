@@ -41,3 +41,10 @@ df_themes <- df_themes[order(-df_themes$n),]
 df_top_themes <- df_themes[1:10, ]
 barplot(df_top_themes$percent, names.arg = df_top_themes$theme, 
         xlab="Number of occurences", ylab = "Theme name", cex.names=0.5)
+
+#10 
+
+# creating a vector saying if the cell is 1 or not
+selector <- df_bob[1, ] == 1
+# if you take a looks 
+colnames(df_bob)[as.vector(selector)]
