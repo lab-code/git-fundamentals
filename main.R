@@ -18,3 +18,9 @@ nrow(df_bob[df_bob$TREES == 1 & df_bob$WINTER == 1, ])/n_episodes
 #F First two columns are strings. So we want to add only numbers in the third to the last one c(3:70)
 df_bob$N_THEMES = rowSums(df_bob[, c(3:70)])
 summary(df_bob$N_THEMES)
+
+# 6
+# Lets find the max 
+max_themes <- max(df_bob$N_THEMES)
+df_theme_overload <- df_bob[df_bob$N_THEMES == max_themes, ]
+df_theme_overload$TITLE
