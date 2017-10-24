@@ -28,3 +28,9 @@ df_theme_overload$TITLE
 # 7
 mean(df_bob$N_THEMES)
 median(df_bob$N_THEMES)
+
+# 8
+# We again need to sum only numeric values, so skipping first two
+theme_sums <- colSums(df_bob[,c(3:69)])
+df_themes <- data.frame(theme = colnames(df_bob[, c(3:69)]), n = as.vector(theme_sums))
+head(df_themes,3)
