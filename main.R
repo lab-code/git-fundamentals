@@ -6,3 +6,7 @@ summary(df_bob)
 # 2
 n_episodes <- nrow(df_bob)
 n_episodes
+
+#3
+sum(df_bob$TREES)/n_episodes
+sum(df_bob$WINTER)/n_episodes
