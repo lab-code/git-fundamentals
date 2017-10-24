@@ -24,3 +24,7 @@ summary(df_bob$N_THEMES)
 max_themes <- max(df_bob$N_THEMES)
 df_theme_overload <- df_bob[df_bob$N_THEMES == max_themes, ]
 df_theme_overload$TITLE
+
+# 7
+mean(df_bob$N_THEMES)
+median(df_bob$N_THEMES)
