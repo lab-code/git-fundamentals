@@ -10,3 +10,6 @@ n_episodes
 #3
 sum(df_bob$TREES)/n_episodes
 sum(df_bob$WINTER)/n_episodes
+
+# 4
+nrow(df_bob[df_bob$TREES == 1 & df_bob$WINTER == 1, ])/n_episodes
