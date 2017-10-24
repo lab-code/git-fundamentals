@@ -34,3 +34,10 @@ median(df_bob$N_THEMES)
 theme_sums <- colSums(df_bob[,c(3:69)])
 df_themes <- data.frame(theme = colnames(df_bob[, c(3:69)]), n = as.vector(theme_sums))
 head(df_themes,3)
+
+# 9
+df_themes$percent <- round(df_themes$n*100/n_episodes)
+df_themes <- df_themes[order(-df_themes$n),]
+df_top_themes <- df_themes[1:10, ]
+barplot(df_top_themes$percent, names.arg = df_top_themes$theme, 
+        xlab="Number of occurences", ylab = "Theme name", cex.names=0.5)
